@@ -1,1 +1,23 @@
-___Header___
+.body {
+  font-family: 'Arial',  sans-serif;
+  margin: 0 auto;
+  padding: 0;
+}
+
+* {
+
+  background-image: url('./assets/slumLord.png');
+}
+
+.nav {
+  justify-content: center;
+}
+
+footer {
+  bottom: 0;
+  color: #333;
+  font-size: 16pt;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+}
