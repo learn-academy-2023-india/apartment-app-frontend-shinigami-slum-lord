@@ -1,11 +1,8 @@
 import React from "react"
 
-
-const Footer= () => {
+const Footer = () => {
   return (
-    <div>
-      <h3>Footer</h3>
-    </div>
+    <footer>&copy; 2024 LEARN 1017 Brick Squad | Hiro, Jamar, Keoni</footer>
   )
 }
 

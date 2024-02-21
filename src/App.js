@@ -12,6 +12,7 @@ import SignIn from "./pages/SignIn"
 import NotFound from "./pages/NotFound"
 import ApartmentProtectedIndex from "./pages/ApartmentProtectedIndex"
 import ApartmentNew from "./pages/ApartmentNew"
+import "./App.css"
 
 const App = () => {
   const [currentUser, setCurrentUser] = useState(mockUsers[0])
@@ -19,15 +20,15 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header currentUser= {currentUser}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/apartmentindex" element={<ApartmentIndex />} />
-        <Route path="/catshow" element={<ApartmentShow />} />
-        <Route path="/catnew" element={<ApartmentNew />} />
-        <Route path="/catedit" element={<ApartmentProtectedIndex />} />
-        <Route path="/catedit" element={<SignIn />} />
-        <Route path="/catedit" element={<SignUp />} />
+        <Route path="/apartmentindex" element={<ApartmentIndex apartment={apartments} />} />
+        <Route path="/apartmentshow/:id" element={<ApartmentShow apartment={apartments} />} />
+        <Route path="/apartmentnew" element={<ApartmentNew />} />
+        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex />} />
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
