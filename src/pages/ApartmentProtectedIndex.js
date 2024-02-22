@@ -26,8 +26,14 @@ const ApartmentProtectedIndex = ({ currentUser, apartments }) => {
                 </CardSubtitle>
                 <NavLink to={`/apartmentshow/${apartment.id}`} className="nav-link"> 
                 </NavLink>
-                <Button>
+                <Button className="moreDetails">
                   More Details
+                </Button>
+                <Button className="editApartment">
+                  Edit Apartment
+                </Button>
+                <Button className="deleteApartment">
+                  Delete Apartment
                 </Button>
               </CardBody>
             </Card>

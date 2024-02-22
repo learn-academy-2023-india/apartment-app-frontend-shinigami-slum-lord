@@ -24,3 +24,17 @@ footer {
 div.apartment-Cards{
   flex-direction: row;
 }
+
+button.deleteApartment{
+  color: whitesmoke;
+  margin: 5px;
+}
+button.editApartment{
+  color: whitesmoke;
+  margin: 20px;
+}
+
+button.moreDaetails{
+  color: whitesmoke;
+  margin: 20px;
+}
