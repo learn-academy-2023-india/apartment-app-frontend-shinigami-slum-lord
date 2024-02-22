@@ -26,7 +26,18 @@ const App = () => {
         <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
         <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />
-        <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex />} />
+        {currentUser && (
+           <Route 
+            path="/apartmentprotectedindex" 
+            element={
+              <ApartmentProtectedIndex 
+                currentUser={currentUser}
+                apartments={apartments}
+              />
+            } 
+           />
+        )}
+        
         <Route path="/signin" element={<SignIn />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="*" element={<NotFound />} />
