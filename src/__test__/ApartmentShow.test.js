@@ -4,8 +4,7 @@ import ApartmentShow from "../pages/ApartmentShow"
 import mockApartments from '../mockApartments'
 
 describe("<ApartmentShow />", () => {
-  it("renders without crashing", () => {})
-  it("renders apartment cards", () => {
+  it("renders one apartment", () => {
     render(
       <MemoryRouter initialEntries={["/apartmentshow/1"]}>
         <Routes>
@@ -13,12 +12,9 @@ describe("<ApartmentShow />", () => {
         </Routes>
       </MemoryRouter>
     )
-    mockApartments.forEach((apartment) =>{
-      screen.logTestingPlaygroundURL()
-      const apartmentUnit = screen.getByRole('img', {
-        name: /preview of an apartment 9a/i
-      })
-      expect(apartmentUnit).toBeInTheDocument()
+    const apartmentInfo = screen.getByRole('img', {
+      name: /preview of an apartment 9a/i
     })
+    expect(apartmentInfo).toBeInTheDocument()
   })
 })
