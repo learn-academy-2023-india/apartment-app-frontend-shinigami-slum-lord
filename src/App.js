@@ -23,8 +23,8 @@ const App = () => {
       <Header currentUser= {currentUser}/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/apartmentindex" element={<ApartmentIndex apartment={apartments} />} />
-        <Route path="/apartmentshow/:id" element={<ApartmentShow apartment={apartments} />} />
+        <Route path="/apartmentindex" element={<ApartmentIndex apartments={apartments} />} />
+        <Route path="/apartmentshow/:id" element={<ApartmentShow apartments={apartments} />} />
         <Route path="/apartmentnew" element={<ApartmentNew />} />
         <Route path="/apartmentprotectedindex" element={<ApartmentProtectedIndex />} />
         <Route path="/signin" element={<SignIn />} />
