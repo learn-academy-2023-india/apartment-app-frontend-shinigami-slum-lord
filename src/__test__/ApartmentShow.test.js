@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { render, screen } from "@testing-library/react"
 import { MemoryRouter, Routes, Route } from "react-router-dom";
 import ApartmentShow from "../pages/ApartmentShow"
 import mockApartments from '../mockApartments'
@@ -13,5 +13,12 @@ describe("<ApartmentShow />", () => {
         </Routes>
       </MemoryRouter>
     )
+    mockApartments.forEach((apartment) =>{
+      screen.logTestingPlaygroundURL()
+      const apartmentUnit = screen.getByRole('img', {
+        name: /preview of an apartment 9a/i
+      })
+      expect(apartmentUnit).toBeInTheDocument()
+    })
   })
 })
