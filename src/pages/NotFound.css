@@ -1,0 +1,14 @@
+.notFoundContainer {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.heading {
+  font-size: 2em;
+  color: #fff;
+}
+
+.message {
+  font-size: 1.2em;
+  color: #333;
+}
