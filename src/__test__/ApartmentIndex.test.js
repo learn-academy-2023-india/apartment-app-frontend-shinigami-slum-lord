@@ -13,7 +13,6 @@ describe("<apartmentIndex />", () =>{
             </BrowserRouter>
         )
         mockApartments.forEach((apartment) =>{
-            screen.logTestingPlaygroundURL()
             const apartmentStreet = screen.getByText(/street: 101 rimrock, san diego, ca/i)
             expect(apartmentStreet).toBeInTheDocument()
         })
