@@ -9,7 +9,6 @@ test("renders footer content", () => {
       <Footer />
     </BrowserRouter>
   );
-  // screen.logTestingPlaygroundURL();
   const footerText = screen.getByRole('contentinfo')
 
   expect(footerText).toBeInTheDocument();
