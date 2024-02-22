@@ -14,22 +14,4 @@ describe("<ApartmentShow />", () => {
       </MemoryRouter>
     )
   })
-
-  const { id } = useParams()
-  let currentApartment = apartments?.find((apartment) => apartment.id === +id)
-
-  return (
-    <main className="apartment-show-cards">
-      {currentApartment && (
-        <>
-         <img
-            alt={`Preview of an apartment ${currentApartment.unit}`}
-            src={currentApartment.image}
-            className="apartment-show-img"
-          />
-          {/* additional apartment code here */}
-        </>
-      )}
-    </main>
-  )
 })
