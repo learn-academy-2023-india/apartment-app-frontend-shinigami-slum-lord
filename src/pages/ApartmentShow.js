@@ -14,7 +14,6 @@ const ApartmentShow = ({ apartments }) => {
             src={currentApartment.image}
             className="apartment-show-img"
           />
-          {/* additional apartment code here */}
         </>
       )}
     </main>

@@ -5,11 +5,11 @@ import mockApartments from '../mockApartments'
 
 describe("<ApartmentShow />", () => {
   it("renders without crashing", () => {})
-  it("renders cat cards", () => {
+  it("renders apartment cards", () => {
     render(
-      <MemoryRouter initialEntries={["/catshow/1"]}>
+      <MemoryRouter initialEntries={["/apartmentshow/1"]}>
         <Routes>
-          <Route path="catshow/:id" element={<CatShow cats={mockCats}/>} />
+          <Route path="apartmentshow/:id" element={<ApartmentShow apartments={mockApartments}/>} />
         </Routes>
       </MemoryRouter>
     )
