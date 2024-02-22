@@ -21,3 +21,6 @@ footer {
   width: 100%;
   text-align: center;
 }
+div.apartment-Cards{
+  flex-direction: row;
+}
